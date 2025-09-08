@@ -58,5 +58,17 @@ public class Main {
 
     System.out.println("The source station name from train B " + trainB.getSourceStation().getStationName());
     System.out.println("The bogieOrder for train B " + trainB.getBoggieOrder().get(3));
+
+    trainA = Train.boggiesLeft(trainA, "HYB");
+    int szeA =trainA.getBoggieOrder().size();
+    for(int i=0;i<szeA;i++){
+      System.out.println("The "+(i+1)+" boggie "+trainA.getBoggieOrder().get(i));
+    }
+
+    trainB = Train.boggiesLeft(trainB, "HYB");
+    int szeB =trainB.getBoggieOrder().size();
+    for(int i=0;i<szeB;i++){
+      System.out.println("The "+(i+1)+" boggie "+trainB.getBoggieOrder().get(i));
+    }
   }
 }

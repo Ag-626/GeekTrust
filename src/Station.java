@@ -28,10 +28,10 @@ public class Station {
   }
 
   public String getStationCode(){
-    return this.getStationCode();
+    return this.stationCode;
   }
 
   public int getDistanceFromSource(){
-    return this.getDistanceFromSource();
+    return this.distanceFromSource;
   }
 }

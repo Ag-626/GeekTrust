@@ -14,6 +14,21 @@ public class Train {
     this.boggieOrder = boggieOrder;
   }
 
+  public static Train boggiesLeft(Train train, String stationCode){
+    int idx = indexOfStationCode(train, stationCode);
+
+    if(idx>=0){
+      for(int i=0;i<idx;i++){
+        Station stop = train.getRoute().get(i);
+        String codeToRemove = stop.getStationCode();         // e.g., "HYB"
+        train.getBoggieOrder().removeIf(
+            token -> token.equalsIgnoreCase(codeToRemove) && !"ENGINE".equalsIgnoreCase(token)
+        );
+      }
+    }
+
+    return train;
+  }
   public Station getSourceStation() {
     return sourceStation;
   }
@@ -45,6 +60,17 @@ public class Train {
   public void setBoggieOrder(ArrayList<String> boggieOrder) {
     this.boggieOrder = boggieOrder;
   }
+
+private static int indexOfStationCode(Train train, String stationCode){
+    int sze = train.getRoute().size();
+    int i=0;
+    while(i<sze && !(train.getRoute().get(i).getStationCode().equalsIgnoreCase(stationCode))){
+      i++;
+    }
+    if(i==sze)
+      i=-1;
+    return i;
+}
 
 
 }
