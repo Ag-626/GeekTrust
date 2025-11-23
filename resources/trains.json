@@ -1,0 +1,28 @@
+{
+  "TRAIN_A": {
+    "CHENNAI (CHN)": 0,
+    "SALEM (SLM)": 350,
+    "BANGALORE (BLR)": 550,
+    "KURNOOL (KRN)": 900,
+    "HYDERABAD (HYB)": 1200,
+    "NAGPUR (NGP)": 1600,
+    "ITARSI (ITJ)": 1900,
+    "BHOAPL (BPL)": 2000,
+    "AGRA (AGA)": 2500,
+    "NEW DELHI (NDL)": 2700
+  },
+  "TRAIN_B": {
+    "TRIVANDRUM (TVC)": 0,
+    "SHORANUR (SRR)": 300,
+    "MANGALORE (MAQ)": 600,
+    "MADGAON (MAO)": 1000,
+    "PUNE (PNE)": 1400,
+    "HYDERABAD (HYB)": 2000,
+    "NAGPUR (NGP)": 2400,
+    "ITARSI (ITJ)": 2700,
+    "BHOPAL (BPL)": 2800,
+    "PATNA (PTA)": 3800,
+    "NEW JALPAIGURI (NJP)": 4200,
+    "GUWAHATI (GHY)": 4700
+  }
+}
