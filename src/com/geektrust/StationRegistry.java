@@ -5,10 +5,16 @@ import java.util.Map;
 
 public class StationRegistry {
 
-  private Map<String, Station> stationMapping;
+  private static final StationRegistry INSTANCE = new StationRegistry();
 
-  public StationRegistry(){
+  private final Map<String, Station> stationMapping;
+
+  private StationRegistry(){
     this.stationMapping = new HashMap<>();
+  }
+
+  public static StationRegistry getInstance() {
+    return INSTANCE;
   }
 
 

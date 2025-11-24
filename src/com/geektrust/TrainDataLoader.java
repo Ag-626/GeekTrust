@@ -8,8 +8,9 @@ import java.util.*;
 
 public class TrainDataLoader {
 
-  public static List<Train> loadTrains(String jsonFilePath, StationRegistry stationRegistry) {
+  public static List<Train> loadTrains(String jsonFilePath) {
     List<Train> trains = new ArrayList<>();
+    StationRegistry stationRegistry = StationRegistry.getInstance();
 
     try {
       String content = new String(Files.readAllBytes(Paths.get(jsonFilePath)));
