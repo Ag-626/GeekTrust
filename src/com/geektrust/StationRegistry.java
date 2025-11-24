@@ -11,12 +11,15 @@ public class StationRegistry {
     this.stationMapping = new HashMap<>();
   }
 
-  public void addStation(String stationCode, Station station){
 
-    if (this.stationMapping.containsKey(stationCode)){
-      throw new IllegalArgumentException("Station with code " + stationCode + " already exists");
+  public Station getOrCreateStation(String stationCode, String stationName) {
+    Station existing = this.stationMapping.get(stationCode);
+    if (existing != null) {
+      return existing;
     }
+    Station station = new Station(stationCode, stationName);
     this.stationMapping.put(stationCode, station);
+    return station;
   }
 
   public Station getStation(String stationCode){
