@@ -30,8 +30,12 @@ public class Main {
     } catch (Exception e){
       throw new RuntimeException("The process to read the input file failed " + e);
     }
-
-
+    List<TrainComposition> trainCompositionOnArrival;
+    try{
+      trainCompositionOnArrival = TrainCompositionService.orderOfBogies(processingStationCode, stationRegistry, trainCompositions);
+    } catch (Exception e){
+      throw new RuntimeException("The runtime exception occur while find the trainComposition on Arrival " + e);
+    }
   }
 
 }
