@@ -21,6 +21,15 @@ public class Main {
 
     StationRegistry stationRegistry = appInitializer.getStationRegistry();
     List<Train> trains = appInitializer.getTrains();
+    String processingStationCode = appInitializer.getProcessingStationCode();
+
+    List<TrainComposition> trainCompositions;
+
+    try {
+      trainCompositions = InputParser.processInput(inputFilePath);
+    } catch (Exception e){
+      throw new RuntimeException("The process to read the input file failed " + e);
+    }
 
 
   }
