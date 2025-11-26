@@ -2,7 +2,7 @@ package com.geektrust;
 
 import java.util.List;
 
-public class Main {
+public class Geektrust {
 
   public static void main(String [] args){
 

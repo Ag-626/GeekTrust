@@ -62,13 +62,13 @@ javac -cp src src/com/geektrust/*.java src/com/geektrust/init/*.java src/com/gee
 ## How to Run
 
 ```
-java -cp src com.geektrust.Main <path_to_input_file>
+java -cp src com.geektrust.Geektrust <path_to_input_file>
 ```
 
 Example:
 
 ```
-java -cp src com.geektrust.Main resources/input1.txt
+java -cp src com.geektrust.Geektrust resources/input1.txt
 ```
 
 ## Input Format
