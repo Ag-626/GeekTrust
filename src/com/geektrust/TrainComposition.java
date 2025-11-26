@@ -17,6 +17,10 @@ public class TrainComposition {
     this.bogieOrder.add(bogie);
   }
 
+  public void setBogieOrder(List<Bogie> bogieOrder){
+    this.bogieOrder = bogieOrder;
+  }
+
   public String getTrainName(){
     return this.trainName;
   }

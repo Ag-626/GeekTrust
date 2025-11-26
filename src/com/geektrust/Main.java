@@ -22,7 +22,6 @@ public class Main {
     StationRegistry stationRegistry = appInitializer.getStationRegistry();
     List<Train> trains = appInitializer.getTrains();
     String processingStationCode = appInitializer.getProcessingStationCode();
-
     List<TrainComposition> trainCompositions;
 
     try {
@@ -32,10 +31,16 @@ public class Main {
     }
     List<TrainComposition> trainCompositionOnArrival;
     try{
-      trainCompositionOnArrival = TrainCompositionService.orderOfBogies(processingStationCode, stationRegistry, trainCompositions);
+      trainCompositionOnArrival = TrainCompositionService.filterBogies(processingStationCode, stationRegistry, trainCompositions);
     } catch (Exception e){
       throw new RuntimeException("The runtime exception occur while find the trainComposition on Arrival " + e);
     }
+    OutputParser.resultOnArrival(trainCompositionOnArrival);
+
+    TrainComposition trainCompositionOnDeparture = TrainCompositionService.mergeBogies(processingStationCode, stationRegistry, trainCompositionOnArrival);
+
+    OutputParser.resultOnDeparture(trainCompositionOnDeparture);
+
   }
 
 }
