@@ -1,0 +1,8 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sun Dec 14 23:59:56 IST 2025
+@default-maven-https\://repo1.maven.org/maven2/.lastUpdated=1765736996020
+@default-central-https\://artifactory.ushur.dev/artifactory/plugins-release/.lastUpdated=1765736996028
+https\://repo1.maven.org/maven2/.error=Could not transfer artifact org.jacoco\:jacoco-maven-plugin\:pom\:0.8.7 from/to maven (https\://repo1.maven.org/maven2/)\: repo1.maven.org\: nodename nor servname provided, or not known
+https\://artifactory.ushur.dev/artifactory/plugins-snapshot/.error=Could not transfer artifact org.jacoco\:jacoco-maven-plugin\:pom\:0.8.7 from/to snapshots (https\://artifactory.ushur.dev/artifactory/plugins-snapshot)\: artifactory.ushur.dev
+@default-snapshots-https\://artifactory.ushur.dev/artifactory/plugins-snapshot/.lastUpdated=1765736996029
+https\://artifactory.ushur.dev/artifactory/plugins-release/.error=Could not transfer artifact org.jacoco\:jacoco-maven-plugin\:pom\:0.8.7 from/to central (https\://artifactory.ushur.dev/artifactory/plugins-release)\: artifactory.ushur.dev\: nodename nor servname provided, or not known
